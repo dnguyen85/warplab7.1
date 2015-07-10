@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+########################################################################
+##
+## Copyright (c) 2010 Xilinx, Inc.  All rights reserved.
+##
+########################################################################
+-->
+
+<!DOCTYPE doc SYSTEM "sg_ipdialog.dtd" [
+<!ENTITY C_BASEADDR '
+<widget id="C_BASEADDR">
+    <key>C_BASEADDR</key>
+    <label>C_BASEADDR</label>
+    <tip>Base Address</tip>
+</widget>
+'>
+<!ENTITY C_HIGHADDR '
+<widget id="C_HIGHADDR">
+    <key>C_HIGHADDR</key>
+    <label>C_HIGHADDR</label>
+    <tip>High Address</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GRF_D '
+<widget id="C_MEMMAP_GRF_D">
+    <key>C_MEMMAP_GRF_D</key>
+    <label>C_MEMMAP_GRF_D</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GRF_C '
+<widget id="C_MEMMAP_GRF_C">
+    <key>C_MEMMAP_GRF_C</key>
+    <label>C_MEMMAP_GRF_C</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GRF_B '
+<widget id="C_MEMMAP_GRF_B">
+    <key>C_MEMMAP_GRF_B</key>
+    <label>C_MEMMAP_GRF_B</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GRF_A '
+<widget id="C_MEMMAP_GRF_A">
+    <key>C_MEMMAP_GRF_A</key>
+    <label>C_MEMMAP_GRF_A</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GBB_D '
+<widget id="C_MEMMAP_GBB_D">
+    <key>C_MEMMAP_GBB_D</key>
+    <label>C_MEMMAP_GBB_D</label>
+    <tip>From Register
+    data type: UFix_5_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GBB_C '
+<widget id="C_MEMMAP_GBB_C">
+    <key>C_MEMMAP_GBB_C</key>
+    <label>C_MEMMAP_GBB_C</label>
+    <tip>From Register
+    data type: UFix_5_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GBB_B '
+<widget id="C_MEMMAP_GBB_B">
+    <key>C_MEMMAP_GBB_B</key>
+    <label>C_MEMMAP_GBB_B</label>
+    <tip>From Register
+    data type: UFix_5_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GBB_A '
+<widget id="C_MEMMAP_GBB_A">
+    <key>C_MEMMAP_GBB_A</key>
+    <label>C_MEMMAP_GBB_A</label>
+    <tip>From Register
+    data type: UFix_5_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TIMING '
+<widget id="C_MEMMAP_TIMING">
+    <key>C_MEMMAP_TIMING</key>
+    <label>C_MEMMAP_TIMING</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_THRESHOLDS '
+<widget id="C_MEMMAP_THRESHOLDS">
+    <key>C_MEMMAP_THRESHOLDS</key>
+    <label>C_MEMMAP_THRESHOLDS</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_T_DB '
+<widget id="C_MEMMAP_T_DB">
+    <key>C_MEMMAP_T_DB</key>
+    <label>C_MEMMAP_T_DB</label>
+    <tip>To Register
+    data type: UFix_16_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_SRESET_IN '
+<widget id="C_MEMMAP_SRESET_IN">
+    <key>C_MEMMAP_SRESET_IN</key>
+    <label>C_MEMMAP_SRESET_IN</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_AGC_EN '
+<widget id="C_MEMMAP_AGC_EN">
+    <key>C_MEMMAP_AGC_EN</key>
+    <label>C_MEMMAP_AGC_EN</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_PACKET_IN '
+<widget id="C_MEMMAP_PACKET_IN">
+    <key>C_MEMMAP_PACKET_IN</key>
+    <label>C_MEMMAP_PACKET_IN</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_MRESET_IN '
+<widget id="C_MEMMAP_MRESET_IN">
+    <key>C_MEMMAP_MRESET_IN</key>
+    <label>C_MEMMAP_MRESET_IN</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_GBB_INIT '
+<widget id="C_MEMMAP_GBB_INIT">
+    <key>C_MEMMAP_GBB_INIT</key>
+    <label>C_MEMMAP_GBB_INIT</label>
+    <tip>To Register
+    data type: UFix_16_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_DCO_TIMING '
+<widget id="C_MEMMAP_DCO_TIMING">
+    <key>C_MEMMAP_DCO_TIMING</key>
+    <label>C_MEMMAP_DCO_TIMING</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_BITS '
+<widget id="C_MEMMAP_BITS">
+    <key>C_MEMMAP_BITS</key>
+    <label>C_MEMMAP_BITS</label>
+    <tip>To Register
+    data type: UFix_10_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_AVG_LEN '
+<widget id="C_MEMMAP_AVG_LEN">
+    <key>C_MEMMAP_AVG_LEN</key>
+    <label>C_MEMMAP_AVG_LEN</label>
+    <tip>To Register
+    data type: UFix_16_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_AGC_TRIGGER_DELAY '
+<widget id="C_MEMMAP_AGC_TRIGGER_DELAY">
+    <key>C_MEMMAP_AGC_TRIGGER_DELAY</key>
+    <label>C_MEMMAP_AGC_TRIGGER_DELAY</label>
+    <tip>To Register
+    data type: UFix_9_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_AGC_EN_GLOBAL '
+<widget id="C_MEMMAP_AGC_EN_GLOBAL">
+    <key>C_MEMMAP_AGC_EN_GLOBAL</key>
+    <label>C_MEMMAP_AGC_EN_GLOBAL</label>
+    <tip>To Register
+    data type: UFix_1_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_ADJ '
+<widget id="C_MEMMAP_ADJ">
+    <key>C_MEMMAP_ADJ</key>
+    <label>C_MEMMAP_ADJ</label>
+    <tip>To Register
+    data type: UFix_16_0</tip>
+</widget>
+'>
+]>
+
+<doc>
+<view id="Memory Map Information">
+    <display>Memory Map Information</display>
+    <group id="All">
+        <display>All</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+        <item>&C_MEMMAP_GRF_D;</item>
+        <item>&C_MEMMAP_GRF_C;</item>
+        <item>&C_MEMMAP_GRF_B;</item>
+        <item>&C_MEMMAP_GRF_A;</item>
+        <item>&C_MEMMAP_GBB_D;</item>
+        <item>&C_MEMMAP_GBB_C;</item>
+        <item>&C_MEMMAP_GBB_B;</item>
+        <item>&C_MEMMAP_GBB_A;</item>
+        <item>&C_MEMMAP_TIMING;</item>
+        <item>&C_MEMMAP_THRESHOLDS;</item>
+        <item>&C_MEMMAP_T_DB;</item>
+        <item>&C_MEMMAP_SRESET_IN;</item>
+        <item>&C_MEMMAP_AGC_EN;</item>
+        <item>&C_MEMMAP_PACKET_IN;</item>
+        <item>&C_MEMMAP_MRESET_IN;</item>
+        <item>&C_MEMMAP_GBB_INIT;</item>
+        <item>&C_MEMMAP_DCO_TIMING;</item>
+        <item>&C_MEMMAP_BITS;</item>
+        <item>&C_MEMMAP_AVG_LEN;</item>
+        <item>&C_MEMMAP_AGC_TRIGGER_DELAY;</item>
+        <item>&C_MEMMAP_AGC_EN_GLOBAL;</item>
+        <item>&C_MEMMAP_ADJ;</item>
+    </group>
+    <group id="From/To Registers">
+        <display>From/To Registers</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+        <item>&C_MEMMAP_GRF_D;</item>
+        <item>&C_MEMMAP_GRF_C;</item>
+        <item>&C_MEMMAP_GRF_B;</item>
+        <item>&C_MEMMAP_GRF_A;</item>
+        <item>&C_MEMMAP_GBB_D;</item>
+        <item>&C_MEMMAP_GBB_C;</item>
+        <item>&C_MEMMAP_GBB_B;</item>
+        <item>&C_MEMMAP_GBB_A;</item>
+        <item>&C_MEMMAP_TIMING;</item>
+        <item>&C_MEMMAP_THRESHOLDS;</item>
+        <item>&C_MEMMAP_T_DB;</item>
+        <item>&C_MEMMAP_SRESET_IN;</item>
+        <item>&C_MEMMAP_AGC_EN;</item>
+        <item>&C_MEMMAP_PACKET_IN;</item>
+        <item>&C_MEMMAP_MRESET_IN;</item>
+        <item>&C_MEMMAP_GBB_INIT;</item>
+        <item>&C_MEMMAP_DCO_TIMING;</item>
+        <item>&C_MEMMAP_BITS;</item>
+        <item>&C_MEMMAP_AVG_LEN;</item>
+        <item>&C_MEMMAP_AGC_TRIGGER_DELAY;</item>
+        <item>&C_MEMMAP_AGC_EN_GLOBAL;</item>
+        <item>&C_MEMMAP_ADJ;</item>
+    </group>
+    <group id="From/To FIFOs">
+        <display>From/To FIFOs</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+    </group>
+    <group id="Shared Memories">
+        <display>Shared Memories</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+    </group>
+</view>
+</doc>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+########################################################################
+##
+## Copyright (c) 2010 Xilinx, Inc.  All rights reserved.
+##
+########################################################################
+-->
+
+<!DOCTYPE doc SYSTEM "sg_ipdialog.dtd" [
+<!ENTITY C_BASEADDR '
+<widget id="C_BASEADDR">
+    <key>C_BASEADDR</key>
+    <label>C_BASEADDR</label>
+    <tip>Base Address</tip>
+</widget>
+'>
+<!ENTITY C_HIGHADDR '
+<widget id="C_HIGHADDR">
+    <key>C_HIGHADDR</key>
+    <label>C_HIGHADDR</label>
+    <tip>High Address</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_BUFF_SIZES '
+<widget id="C_MEMMAP_BUFF_SIZES">
+    <key>C_MEMMAP_BUFF_SIZES</key>
+    <label>C_MEMMAP_BUFF_SIZES</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_DESIGN_VER '
+<widget id="C_MEMMAP_DESIGN_VER">
+    <key>C_MEMMAP_DESIGN_VER</key>
+    <label>C_MEMMAP_DESIGN_VER</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_STATUS '
+<widget id="C_MEMMAP_STATUS">
+    <key>C_MEMMAP_STATUS</key>
+    <label>C_MEMMAP_STATUS</label>
+    <tip>From Register
+    data type: UFix_2_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFCD_AGCDONERSSI '
+<widget id="C_MEMMAP_RFCD_AGCDONERSSI">
+    <key>C_MEMMAP_RFCD_AGCDONERSSI</key>
+    <label>C_MEMMAP_RFCD_AGCDONERSSI</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFAB_AGCDONERSSI '
+<widget id="C_MEMMAP_RFAB_AGCDONERSSI">
+    <key>C_MEMMAP_RFAB_AGCDONERSSI</key>
+    <label>C_MEMMAP_RFAB_AGCDONERSSI</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_AGCDONEADDR '
+<widget id="C_MEMMAP_AGCDONEADDR">
+    <key>C_MEMMAP_AGCDONEADDR</key>
+    <label>C_MEMMAP_AGCDONEADDR</label>
+    <tip>From Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TXDELAY '
+<widget id="C_MEMMAP_TXDELAY">
+    <key>C_MEMMAP_TXDELAY</key>
+    <label>C_MEMMAP_TXDELAY</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RX_BUFF_EN '
+<widget id="C_MEMMAP_RX_BUFF_EN">
+    <key>C_MEMMAP_RX_BUFF_EN</key>
+    <label>C_MEMMAP_RX_BUFF_EN</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_CONFIG '
+<widget id="C_MEMMAP_CONFIG">
+    <key>C_MEMMAP_CONFIG</key>
+    <label>C_MEMMAP_CONFIG</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TX_BUFF_EN '
+<widget id="C_MEMMAP_TX_BUFF_EN">
+    <key>C_MEMMAP_TX_BUFF_EN</key>
+    <label>C_MEMMAP_TX_BUFF_EN</label>
+    <tip>To Register
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RXLENGTH '
+<widget id="C_MEMMAP_RXLENGTH">
+    <key>C_MEMMAP_RXLENGTH</key>
+    <label>C_MEMMAP_RXLENGTH</label>
+    <tip>To Register
+    data type: UFix_24_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_TXLENGTH '
+<widget id="C_MEMMAP_TXLENGTH">
+    <key>C_MEMMAP_TXLENGTH</key>
+    <label>C_MEMMAP_TXLENGTH</label>
+    <tip>To Register
+    data type: UFix_24_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFD_IQ_TX_BUFFER '
+<widget id="C_MEMMAP_RFD_IQ_TX_BUFFER">
+    <key>C_MEMMAP_RFD_IQ_TX_BUFFER</key>
+    <label>C_MEMMAP_RFD_IQ_TX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFD_RSSI_BUFFER '
+<widget id="C_MEMMAP_RFD_RSSI_BUFFER">
+    <key>C_MEMMAP_RFD_RSSI_BUFFER</key>
+    <label>C_MEMMAP_RFD_RSSI_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFD_IQ_RX_BUFFER '
+<widget id="C_MEMMAP_RFD_IQ_RX_BUFFER">
+    <key>C_MEMMAP_RFD_IQ_RX_BUFFER</key>
+    <label>C_MEMMAP_RFD_IQ_RX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFC_IQ_TX_BUFFER '
+<widget id="C_MEMMAP_RFC_IQ_TX_BUFFER">
+    <key>C_MEMMAP_RFC_IQ_TX_BUFFER</key>
+    <label>C_MEMMAP_RFC_IQ_TX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFC_RSSI_BUFFER '
+<widget id="C_MEMMAP_RFC_RSSI_BUFFER">
+    <key>C_MEMMAP_RFC_RSSI_BUFFER</key>
+    <label>C_MEMMAP_RFC_RSSI_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFC_IQ_RX_BUFFER '
+<widget id="C_MEMMAP_RFC_IQ_RX_BUFFER">
+    <key>C_MEMMAP_RFC_IQ_RX_BUFFER</key>
+    <label>C_MEMMAP_RFC_IQ_RX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFB_IQ_TX_BUFFER '
+<widget id="C_MEMMAP_RFB_IQ_TX_BUFFER">
+    <key>C_MEMMAP_RFB_IQ_TX_BUFFER</key>
+    <label>C_MEMMAP_RFB_IQ_TX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFB_RSSI_BUFFER '
+<widget id="C_MEMMAP_RFB_RSSI_BUFFER">
+    <key>C_MEMMAP_RFB_RSSI_BUFFER</key>
+    <label>C_MEMMAP_RFB_RSSI_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFB_IQ_RX_BUFFER '
+<widget id="C_MEMMAP_RFB_IQ_RX_BUFFER">
+    <key>C_MEMMAP_RFB_IQ_RX_BUFFER</key>
+    <label>C_MEMMAP_RFB_IQ_RX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFA_IQ_TX_BUFFER '
+<widget id="C_MEMMAP_RFA_IQ_TX_BUFFER">
+    <key>C_MEMMAP_RFA_IQ_TX_BUFFER</key>
+    <label>C_MEMMAP_RFA_IQ_TX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFA_RSSI_BUFFER '
+<widget id="C_MEMMAP_RFA_RSSI_BUFFER">
+    <key>C_MEMMAP_RFA_RSSI_BUFFER</key>
+    <label>C_MEMMAP_RFA_RSSI_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+<!ENTITY C_MEMMAP_RFA_IQ_RX_BUFFER '
+<widget id="C_MEMMAP_RFA_IQ_RX_BUFFER">
+    <key>C_MEMMAP_RFA_IQ_RX_BUFFER</key>
+    <label>C_MEMMAP_RFA_IQ_RX_BUFFER</label>
+    <tip>Shared Memory
+    data type: UFix_32_0</tip>
+</widget>
+'>
+]>
+
+<doc>
+<view id="Memory Map Information">
+    <display>Memory Map Information</display>
+    <group id="All">
+        <display>All</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+        <item>&C_MEMMAP_BUFF_SIZES;</item>
+        <item>&C_MEMMAP_DESIGN_VER;</item>
+        <item>&C_MEMMAP_STATUS;</item>
+        <item>&C_MEMMAP_RFCD_AGCDONERSSI;</item>
+        <item>&C_MEMMAP_RFAB_AGCDONERSSI;</item>
+        <item>&C_MEMMAP_AGCDONEADDR;</item>
+        <item>&C_MEMMAP_TXDELAY;</item>
+        <item>&C_MEMMAP_RX_BUFF_EN;</item>
+        <item>&C_MEMMAP_CONFIG;</item>
+        <item>&C_MEMMAP_TX_BUFF_EN;</item>
+        <item>&C_MEMMAP_RXLENGTH;</item>
+        <item>&C_MEMMAP_TXLENGTH;</item>
+        <item>&C_MEMMAP_RFD_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFD_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFD_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_IQ_RX_BUFFER;</item>
+    </group>
+    <group id="From/To Registers">
+        <display>From/To Registers</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+        <item>&C_MEMMAP_BUFF_SIZES;</item>
+        <item>&C_MEMMAP_DESIGN_VER;</item>
+        <item>&C_MEMMAP_STATUS;</item>
+        <item>&C_MEMMAP_RFCD_AGCDONERSSI;</item>
+        <item>&C_MEMMAP_RFAB_AGCDONERSSI;</item>
+        <item>&C_MEMMAP_AGCDONEADDR;</item>
+        <item>&C_MEMMAP_TXDELAY;</item>
+        <item>&C_MEMMAP_RX_BUFF_EN;</item>
+        <item>&C_MEMMAP_CONFIG;</item>
+        <item>&C_MEMMAP_TX_BUFF_EN;</item>
+        <item>&C_MEMMAP_RXLENGTH;</item>
+        <item>&C_MEMMAP_TXLENGTH;</item>
+    </group>
+    <group id="From/To FIFOs">
+        <display>From/To FIFOs</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+    </group>
+    <group id="Shared Memories">
+        <display>Shared Memories</display>
+        <item>&C_BASEADDR;</item>
+        <item>&C_HIGHADDR;</item>
+        <item>&C_MEMMAP_RFD_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFD_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFD_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFC_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFB_IQ_RX_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_IQ_TX_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_RSSI_BUFFER;</item>
+        <item>&C_MEMMAP_RFA_IQ_RX_BUFFER;</item>
+    </group>
+</view>
+</doc>

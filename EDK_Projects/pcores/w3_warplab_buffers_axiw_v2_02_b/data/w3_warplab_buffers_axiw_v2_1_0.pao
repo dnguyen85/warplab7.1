@@ -1,0 +1,20 @@
+#############################################################
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Peripheral Analyze Order (PAO) file
+# created by System Generator
+# Apr 24, 2013 10:53:22 AM
+#############################################################
+
+lib w3_warplab_buffers_axiw_v2_02_b w3_warplab_buffers vhdl
+lib w3_warplab_buffers_axiw_v2_02_b block_memory_generator_virtex6_7_3_0bb38ca62568dca5 vhdl
+lib w3_warplab_buffers_axiw_v2_02_b block_memory_generator_virtex6_7_3_5c11493ba40b847c vhdl
+lib w3_warplab_buffers_axiw_v2_02_b w3_warplab_buffers_cw vhdl
+lib w3_warplab_buffers_axiw_v2_02_b w3_warplab_buffers_axiw vhdl

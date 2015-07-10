@@ -1,0 +1,17 @@
+#############################################################
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Black Box Definition (BBD) file
+# created by System Generator
+# Mar 3, 2013 1:07:38 PM
+#############################################################
+
+FILES
+xlpersistentdff.ngc, mult_11_2_ff04630c460514f2.ngc, mult_11_2_ded4662fa3a6dd0f.ngc, mult_11_2_d14ac9f6035baced.ngc, mult_11_2_b8b9c734a34df937.ngc, mult_11_2_726e084f322acbb0.ngc, mult_11_2_63ed62afc589f3d0.ngc, mult_11_2_1d47825e1d2a837c.ngc, cntr_11_0_86806e294f737f4c.ngc, cntr_11_0_511eb7a1af6f3f2a.ngc, cntr_11_0_3cb0d3527735316e.ngc, bmg_72_ac89af00cd36169a.ngc, bmg_72_9bcb726b56bae5fc.ngc, bmg_72_7cebf291863e8154.ngc, asr_11_0_5c9c6a297ef30376.ngc, asr_11_0_52733b2e79f014b5.ngc, asr_11_0_3b8473fcc684987b.ngc, addsb_11_0_f56c214a058e7593.ngc, addsb_11_0_e0943def5dec93a3.ngc, addsb_11_0_a52ead9b8a3c1e76.ngc, addsb_11_0_76821d30ce8a19fb.ngc, addsb_11_0_6fff63a0f1e46165.ngc, addsb_11_0_5c670787eb4ba225.ngc, addsb_11_0_5107ece67e1a9b77.ngc, addsb_11_0_3e7b009c67354b1e.ngc

@@ -1,0 +1,4 @@
+.metadata/
+*.log
+download.bit
+microblaze_0/
