@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.57"
+    ComputedModelVersion    "1.59"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,16 +54,16 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "68"
 	  Extents		  [1880.0, 846.0]
-	  ZoomFactor		  [0.94]
-	  Offset		  [0.0, 0.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [111.0, 173.75]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1880.0, 846.0]
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 15 17:51:26 2015"
+  LastModifiedDate	  "Wed Jul 15 19:01:09 2015"
   RTWModifiedTimeStamp	  358882555
-  ModelVersionFormat	  "1.%<AutoIncrement:57>"
+  ModelVersionFormat	  "1.%<AutoIncrement:59>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -184,7 +184,7 @@ Model {
 	  $ObjectID		  9
 	  Version		  "1.12.1"
 	  StartTime		  "0.0"
-	  StopTime		  "1e3"
+	  StopTime		  "3e3"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -769,6 +769,15 @@ Model {
       TagVisibility	      "local"
     }
     Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      OutDataTypeStr	      "Inherit: auto"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
       BlockType		      Gain
       Gain		      "1"
       Multiplication	      "Element-wise(K.*u)"
@@ -883,6 +892,16 @@ Model {
     Block {
       BlockType		      Terminator
     }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
   }
   System {
     Name		    "rate_change_filters_txrx_2ch"
@@ -900,7 +919,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "198"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1116"
+    SIDHighWatermark	    "1124"
     Block {
       BlockType		      Reference
       Name		      " System Generator"
@@ -6139,7 +6158,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"94"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "2-Ch Decimation A"
@@ -26265,161 +26284,6 @@ Model {
 	  SaturateOnIntegerOverflow off
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Chirp"
-	  SID			  "767"
-	  Ports			  [0, 1]
-	  Position		  [180, 359, 220, 391]
-	  ZOrder		  -5
-	  NamePlacement		  "alternate"
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Chirp"
-	    Location		    [0, 90, 1920, 1061]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Chirp Signal"
-	      SID		      "768"
-	      Ports		      [0, 1]
-	      Position		      [25, 25, 55, 55]
-	      ZOrder		      -1
-	      LibraryVersion	      "1.281"
-	      SourceBlock	      "simulink/Sources/Chirp Signal"
-	      SourceType	      "chirp"
-	      f1		      "0"
-	      T			      "512"
-	      f2		      "0.5"
-	      VectorParams1D	      on
-	    }
-	    Block {
-	      BlockType		      Gain
-	      Name		      "Gain"
-	      SID		      "769"
-	      Position		      [100, 25, 145, 55]
-	      ZOrder		      -2
-	      Gain		      "0.99"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "770"
-	      Position		      [170, 33, 200, 47]
-	      ZOrder		      -3
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Chirp Signal"
-	      SrcPort		      1
-	      DstBlock		      "Gain"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Gain"
-	      SrcPort		      1
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Chirp1"
-	  SID			  "771"
-	  Ports			  [0, 1]
-	  Position		  [180, 384, 220, 416]
-	  ZOrder		  -6
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Chirp1"
-	    Location		    [13, 301, 286, 618]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Chirp Signal"
-	      SID		      "772"
-	      Ports		      [0, 1]
-	      Position		      [25, 25, 55, 55]
-	      ZOrder		      -1
-	      LibraryVersion	      "1.281"
-	      SourceBlock	      "simulink/Sources/Chirp Signal"
-	      SourceType	      "chirp"
-	      f1		      "0"
-	      T			      "512"
-	      f2		      "0.5"
-	      VectorParams1D	      on
-	    }
-	    Block {
-	      BlockType		      Gain
-	      Name		      "Gain"
-	      SID		      "773"
-	      Position		      [100, 25, 145, 55]
-	      ZOrder		      -2
-	      Gain		      "-0.99"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Out1"
-	      SID		      "774"
-	      Position		      [170, 33, 200, 47]
-	      ZOrder		      -3
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Gain"
-	      SrcPort		      1
-	      DstBlock		      "Out1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Chirp Signal"
-	      SrcPort		      1
-	      DstBlock		      "Gain"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
 	  BlockType		  Reference
 	  Name			  "Down Sample"
 	  SID			  "775"
@@ -26624,32 +26488,70 @@ Model {
 	  "T: end icon text');"
 	}
 	Block {
-	  BlockType		  Delay
-	  Name			  "Integer Delay"
-	  SID			  "781"
+	  BlockType		  Reference
+	  Name			  "Downsample"
+	  SID			  "1121"
 	  Ports			  [1, 1]
-	  Position		  [935, 359, 965, 391]
-	  ZOrder		  -13
+	  Position		  [1125, 728, 1160, 762]
+	  ZOrder		  5
 	  ShowName		  off
+	  LibraryVersion	  "1.726"
 	  UserDataPersistent	  on
 	  UserData		  "DataTag1"
-	  InputPortMap		  "u0"
-	  DelayLength		  "48*2"
-	  InputProcessing	  "Inherited"
+	  SourceBlock		  "dspsigops/Downsample"
+	  SourceType		  "Downsample"
+	  N			  "8"
+	  phase			  "0"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  RateOptions		  "Enforce single-rate processing"
+	  smode			  "Allow multirate"
+	  fmode			  "Maintain input frame size"
+	  ic			  "0"
 	}
 	Block {
-	  BlockType		  Delay
-	  Name			  "Integer Delay1"
-	  SID			  "782"
+	  BlockType		  Reference
+	  Name			  "Downsample1"
+	  SID			  "1122"
 	  Ports			  [1, 1]
-	  Position		  [925, 479, 955, 511]
-	  ZOrder		  -14
+	  Position		  [1125, 798, 1160, 832]
+	  ZOrder		  6
 	  ShowName		  off
+	  LibraryVersion	  "1.726"
 	  UserDataPersistent	  on
 	  UserData		  "DataTag2"
-	  InputPortMap		  "u0"
-	  DelayLength		  "48*2"
-	  InputProcessing	  "Inherited"
+	  SourceBlock		  "dspsigops/Downsample"
+	  SourceType		  "Downsample"
+	  N			  "8"
+	  phase			  "0"
+	  InputProcessing	  "Elements as channels (sample based)"
+	  RateOptions		  "Enforce single-rate processing"
+	  smode			  "Allow multirate"
+	  fmode			  "Maintain input frame size"
+	  ic			  "0"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "From Workspace"
+	  SID			  "1117"
+	  Position		  [125, 363, 190, 387]
+	  ZOrder		  1
+	  ShowName		  off
+	  VariableName		  "rx_I"
+	  SampleTime		  "1"
+	  Interpolate		  off
+	  OutputAfterFinalValue	  "Cyclic repetition"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "From Workspace1"
+	  SID			  "1118"
+	  Position		  [125, 388, 190, 412]
+	  ZOrder		  2
+	  ShowName		  off
+	  VariableName		  "rx_Q"
+	  SampleTime		  "1"
+	  Interpolate		  off
+	  OutputAfterFinalValue	  "Cyclic repetition"
 	}
 	Block {
 	  BlockType		  Scope
@@ -26659,7 +26561,7 @@ Model {
 	  Position		  [1170, 326, 1220, 574]
 	  ZOrder		  -17
 	  Floating		  off
-	  Location		  [3, 119, 1919, 1058]
+	  Location		  [3, 101, 1919, 1058]
 	  Open			  off
 	  NumInputPorts		  "8"
 	  TickLabels		  "on"
@@ -26687,8 +26589,8 @@ Model {
 	  }
 	  ShowLegends		  off
 	  TimeRange		  "1000"
-	  YMin			  "-1~-1~-1~-1~-1~-1~-1~-1"
-	  YMax			  "1~1~1~1~1~1~1~1"
+	  YMin			  "-2~-1~-1~-1~-1~-1~-1~-1"
+	  YMax			  "2~1~1~1~1~1~1~1"
 	  DataFormat		  "StructureWithTime"
 	  LimitDataPoints	  off
 	  SampleTime		  "0"
@@ -27042,6 +26944,58 @@ Model {
 	  ShowName		  off
 	}
 	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  SID			  "1119"
+	  Ports			  [1]
+	  Position		  [1110, 620, 1170, 650]
+	  ZOrder		  3
+	  ShowName		  off
+	  VariableName		  "rx_I_10msps"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  SID			  "1120"
+	  Ports			  [1]
+	  Position		  [1110, 675, 1170, 705]
+	  ZOrder		  4
+	  ShowName		  off
+	  VariableName		  "rx_Q_10msps"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  SID			  "1123"
+	  Ports			  [1]
+	  Position		  [1215, 730, 1275, 760]
+	  ZOrder		  7
+	  ShowName		  off
+	  VariableName		  "rx_I_out"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  SID			  "1124"
+	  Ports			  [1]
+	  Position		  [1215, 800, 1275, 830]
+	  ZOrder		  8
+	  ShowName		  off
+	  VariableName		  "rx_Q_out"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
 	  BlockType		  Reference
 	  Name			  "Up Sample"
 	  SID			  "808"
@@ -27192,9 +27146,9 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Chirp"
+	  SrcBlock		  "From Workspace"
 	  SrcPort		  1
-	  Points		  [35, 0]
+	  Points		  [65, 0]
 	  Branch {
 	    DstBlock		    "RxA_I_40M"
 	    DstPort		    1
@@ -27211,16 +27165,16 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Chirp1"
+	  SrcBlock		  "From Workspace1"
 	  SrcPort		  1
-	  Points		  [40, 0]
-	  Branch {
-	    DstBlock		    "RxA_Q_40M"
-	    DstPort		    1
-	  }
+	  Points		  [70, 0]
 	  Branch {
 	    Points		    [0, 100]
 	    DstBlock		    "RxB_Q_40M"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "RxA_Q_40M"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -27230,30 +27184,60 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Integer Delay"
+	  SrcBlock		  "RxA_I_10M"
 	  SrcPort		  1
-	  Points		  [115, 0]
+	  Points		  [197, 0]
 	  Branch {
-	    DstBlock		    "Rx Scope"
-	    DstPort		    2
+	    Points		    [0, 260]
+	    Branch {
+	      Points		      [0, 110]
+	      DstBlock		      "Downsample"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "To Workspace"
+	      DstPort		      1
+	    }
 	  }
 	  Branch {
-	    DstBlock		    "Add"
-	    DstPort		    1
+	    Points		    [78, 0]
+	    Branch {
+	      DstBlock		      "Rx Scope"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Line {
-	  SrcBlock		  "Integer Delay1"
+	  SrcBlock		  "RxA_Q_10M"
 	  SrcPort		  1
-	  Points		  [115, 0]
+	  Points		  [128, 0; 0, 95]
 	  Branch {
-	    DstBlock		    "Rx Scope"
-	    DstPort		    6
+	    Points		    [0, 195]
+	    Branch {
+	      Points		      [0, 125]
+	      DstBlock		      "Downsample1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "To Workspace1"
+	      DstPort		      1
+	    }
 	  }
 	  Branch {
-	    Points		    [0, 50]
-	    DstBlock		    "Add1"
-	    DstPort		    1
+	    Points		    [137, 0]
+	    Branch {
+	      DstBlock		      "Rx Scope"
+	      DstPort		      6
+	    }
+	    Branch {
+	      Points		      [0, 50]
+	      DstBlock		      "Add1"
+	      DstPort		      1
+	    }
 	  }
 	}
 	Line {
@@ -27316,19 +27300,6 @@ Model {
 	  SrcBlock		  "2-Ch Decimation A"
 	  SrcPort		  2
 	  DstBlock		  "Up Sample1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "RxA_I_10M"
-	  SrcPort		  1
-	  DstBlock		  "Integer Delay"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "RxA_Q_10M"
-	  SrcPort		  1
-	  Points		  [95, 0; 0, 95]
-	  DstBlock		  "Integer Delay1"
 	  DstPort		  1
 	}
 	Line {
@@ -27423,6 +27394,18 @@ Model {
 	  SrcBlock		  "Up Sample3"
 	  SrcPort		  1
 	  DstBlock		  "RxB_Q_10M"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Downsample"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Downsample1"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace3"
 	  DstPort		  1
 	}
       }
