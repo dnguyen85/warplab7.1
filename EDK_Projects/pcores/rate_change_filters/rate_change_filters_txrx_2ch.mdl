@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.55"
+    ComputedModelVersion    "1.56"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -64,10 +64,10 @@ Model {
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "812"
 	  Extents		  [1880.0, 810.0]
-	  ZoomFactor		  [1.9899999999999998]
+	  ZoomFactor		  [1.0]
 	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 15 17:06:49 2015"
+  LastModifiedDate	  "Wed Jul 15 17:12:19 2015"
   RTWModifiedTimeStamp	  358876881
-  ModelVersionFormat	  "1.%<AutoIncrement:55>"
+  ModelVersionFormat	  "1.%<AutoIncrement:56>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -887,7 +887,7 @@ Model {
   System {
     Name		    "rate_change_filters_txrx_2ch"
     Location		    [0, 108, 1920, 1061]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -939,7 +939,7 @@ Model {
       deprecated_control      off
       eval_field	      "0"
       has_advanced_control    "0"
-      sggui_pos		      "322,241,464,470"
+      sggui_pos		      "1408, 315, 464, 470"
       block_type	      "sysgen"
       block_version	      "10.1.3"
       sg_icon_stat	      "51,50,0,0,token,white,0,58c5b5770fe5f7c311f53dbc6e73f0f6,right,,[ ],[ ]"
@@ -26652,393 +26652,6 @@ Model {
 	  InputProcessing	  "Inherited"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Reference\nFilter"
-	  SID			  "783"
-	  Ports			  [1, 1]
-	  Position		  [535, 189, 600, 221]
-	  ZOrder		  -15
-	  NamePlacement		  "alternate"
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Reference\nFilter"
-	    Location		    [0, 108, 1920, 1061]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "X"
-	      SID		      "784"
-	      Position		      [110, 198, 140, 212]
-	      ZOrder		      -1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "DAFIR v9_0 2"
-	      SID		      "785"
-	      Ports		      [1, 1]
-	      Position		      [205, 191, 270, 219]
-	      ZOrder		      -2
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/DAFIR v9_0 "
-	      SourceType	      "Xilinx Finite Impulse Response Filter Block"
-	      infoedit		      "Hardware notes: Implemented using distributed arithmetic (DA).  The hardware over sampling rat"
-	      "e determines the degree of parallelism.  A rate of one produces a fully parallel DA filter.  A rate of n (resp."
-	      ", n+1) for an n-bit input signal produces a fully serial implementation for a non-symmetric (resp., symmetric) "
-	      "impulse response.  Intermediate values produce implementations with intermediate levels of parallelism."
-	      coef		      "h64"
-	      structure		      "Inferred from Coefficients"
-	      coef_n_bits	      "18"
-	      coef_bin_pt	      "17"
-	      over_sample	      "1"
-	      reload		      off
-	      valids		      off
-	      rst		      off
-	      latency		      "15"
-	      num_channels	      "1"
-	      serial_input	      off
-	      polyphase_behavior      "Decimate:  4:1 (samples in:out)"
-	      dbl_ovrd		      off
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      explicit_period	      "off"
-	      period		      "1"
-	      use_isim		      "0"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,348,503"
-	      block_type	      "fir"
-	      block_version	      "10.1.2"
-	      sg_icon_stat	      "65,28,1,1,white,blue,0,5af91ae7,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 28 28 0 ],[0.77 0"
-	      ".82 0.91 ]);\nplot([0 65 65 0 0 ],[0 0 28 28 0 ]);\npatch([23.1 28.88 32.88 36.88 40.88 32.88 27.1 23.1 ],[18.4"
-	      "4 18.44 22.44 18.44 22.44 22.44 22.44 18.44 ],[1 1 1 ]);\npatch([27.1 32.88 28.88 23.1 27.1 ],[14.44 14.44 18.4"
-	      "4 18.44 14.44 ],[0.931 0.946 0.973 ]);\npatch([23.1 28.88 32.88 27.1 23.1 ],[10.44 10.44 14.44 14.44 10.44 ],[1"
-	      " 1 1 ]);\npatch([27.1 40.88 36.88 32.88 28.88 23.1 27.1 ],[6.44 6.44 10.44 6.44 10.44 10.44 6.44 ],[0.931 0.946"
-	      " 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');"
-	      "port_label('input',1,'x0');\ncolor('black');port_label('output',1,'y0');\ncolor('black');disp('64 tap');\nfprin"
-	      "tf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Disregard Subsystem"
-	      SID		      "786"
-	      Tag		      "discardX"
-	      Ports		      []
-	      Position		      [301, 250, 359, 308]
-	      ZOrder		      -3
-	      ShowName		      off
-	      AttributesFormatString  "Disregard Subsystem\\nFor Generation"
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Disregard Subsystem"
-	      SourceType	      "Xilinx Disregard Subsystem For Generation Block"
-	      infoedit		      "Place this block into a subsystem to have System Generator ignore the subsystem during code ge"
-	      "neration. This block can be used in combination with the Simulation Multiplexer block to provide an alternative"
-	      " simulation model for another subsystem (e.g., to provide a simulation model for a black box)."
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,243,178"
-	      block_type	      "disregard"
-	      block_version	      "10.1.3"
-	      sg_icon_stat	      "58,58,-1,-1,darkgray,black,0,0,right"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 58 58 0 ],[0 0 58 58 ],[0.1 0.1 0."
-	      "1]);\npatch([14 4 18 4 14 29 33 37 53 40 28 19 33 19 28 40 53 37 33 29 14 ],[6 16 30 44 54 54 50 54 54 41 53 44"
-	      " 30 16 7 19 6 6 10 6 6 ],[0.33 0.33 0.33]);\nplot([0 58 58 0 0 ],[0 0 58 58 0 ]);\nfprintf('','COMMENT: end ico"
-	      "n graphics');\nfprintf('','COMMENT: begin icon text');\nfprintf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Gain
-	      Name		      "Gain"
-	      SID		      "787"
-	      Position		      [425, 190, 470, 220]
-	      ZOrder		      -4
-	      ShowName		      off
-	      Gain		      "0.25"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Rx_I1"
-	      SID		      "788"
-	      Ports		      [1, 1]
-	      Position		      [335, 199, 380, 211]
-	      ZOrder		      -5
-	      NamePlacement	      "alternate"
-	      ShowName		      off
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Gateway Out"
-	      SourceType	      "Xilinx Gateway Out Block"
-	      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, d"
-	      "ouble, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are disc"
-	      "arded, depending on how they are configured."
-	      inherit_from_input      off
-	      hdl_port		      off
-	      timing_constraint	      "None"
-	      locs_specified	      off
-	      LOCs		      "{}"
-	      UseAsDAC		      off
-	      DACChannel	      "'1'"
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,379,628"
-	      block_type	      "gatewayout"
-	      block_version	      "8.2.01"
-	      sg_icon_stat	      "45,12,1,1,white,grey,1,632ec840,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 0 ],[0 0 12 12 0 ],[0.88 0"
-	      ".88 0.88 ]);\nplot([0 45 45 0 0 ],[0 0 12 12 0 ]);\npatch([19.775 21.22 22.22 23.22 24.22 22.22 20.775 19.775 ]"
-	      ",[7.11 7.11 8.11 7.11 8.11 8.11 8.11 7.11 ],[1 1 1 ]);\npatch([20.775 22.22 21.22 19.775 20.775 ],[6.11 6.11 7."
-	      "11 7.11 6.11 ],[0.964 0.964 0.964 ]);\npatch([19.775 21.22 22.22 20.775 19.775 ],[5.11 5.11 6.11 6.11 5.11 ],[1"
-	      " 1 1 ]);\npatch([20.775 24.22 23.22 22.22 21.22 19.775 20.775 ],[4.11 4.11 5.11 4.11 5.11 5.11 4.11 ],[0.964 0."
-	      "964 0.964 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black"
-	      "');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nf"
-	      "printf('','COMMENT: end icon text');"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Y"
-	      SID		      "789"
-	      Position		      [515, 198, 545, 212]
-	      ZOrder		      -6
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rx_I1"
-	      SrcPort		      1
-	      DstBlock		      "Gain"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "DAFIR v9_0 2"
-	      SrcPort		      1
-	      DstBlock		      "Rx_I1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "X"
-	      SrcPort		      1
-	      DstBlock		      "DAFIR v9_0 2"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Gain"
-	      SrcPort		      1
-	      DstBlock		      "Y"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Reference\nFilter1"
-	  SID			  "790"
-	  Ports			  [1, 1]
-	  Position		  [535, 224, 600, 256]
-	  ZOrder		  -16
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Reference\nFilter1"
-	    Location		    [0, 90, 1920, 1061]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "X"
-	      SID		      "791"
-	      Position		      [110, 198, 140, 212]
-	      ZOrder		      -1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "DAFIR v9_0 2"
-	      SID		      "792"
-	      Ports		      [1, 1]
-	      Position		      [205, 191, 270, 219]
-	      ZOrder		      -2
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/DAFIR v9_0 "
-	      SourceType	      "Xilinx Finite Impulse Response Filter Block"
-	      infoedit		      "Hardware notes: Implemented using distributed arithmetic (DA).  The hardware over sampling rat"
-	      "e determines the degree of parallelism.  A rate of one produces a fully parallel DA filter.  A rate of n (resp."
-	      ", n+1) for an n-bit input signal produces a fully serial implementation for a non-symmetric (resp., symmetric) "
-	      "impulse response.  Intermediate values produce implementations with intermediate levels of parallelism."
-	      coef		      "h64"
-	      structure		      "Inferred from Coefficients"
-	      coef_n_bits	      "18"
-	      coef_bin_pt	      "17"
-	      over_sample	      "1"
-	      reload		      off
-	      valids		      off
-	      rst		      off
-	      latency		      "15"
-	      num_channels	      "1"
-	      serial_input	      off
-	      polyphase_behavior      "Decimate:  4:1 (samples in:out)"
-	      dbl_ovrd		      off
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      explicit_period	      "off"
-	      period		      "1"
-	      use_isim		      "0"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,348,503"
-	      block_type	      "fir"
-	      block_version	      "10.1.2"
-	      sg_icon_stat	      "65,28,1,1,white,blue,0,5af91ae7,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 28 28 0 ],[0.77 0"
-	      ".82 0.91 ]);\nplot([0 65 65 0 0 ],[0 0 28 28 0 ]);\npatch([23.1 28.88 32.88 36.88 40.88 32.88 27.1 23.1 ],[18.4"
-	      "4 18.44 22.44 18.44 22.44 22.44 22.44 18.44 ],[1 1 1 ]);\npatch([27.1 32.88 28.88 23.1 27.1 ],[14.44 14.44 18.4"
-	      "4 18.44 14.44 ],[0.931 0.946 0.973 ]);\npatch([23.1 28.88 32.88 27.1 23.1 ],[10.44 10.44 14.44 14.44 10.44 ],[1"
-	      " 1 1 ]);\npatch([27.1 40.88 36.88 32.88 28.88 23.1 27.1 ],[6.44 6.44 10.44 6.44 10.44 10.44 6.44 ],[0.931 0.946"
-	      " 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');"
-	      "port_label('input',1,'x0');\ncolor('black');port_label('output',1,'y0');\ncolor('black');disp('64 tap');\nfprin"
-	      "tf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Disregard Subsystem"
-	      SID		      "793"
-	      Tag		      "discardX"
-	      Ports		      []
-	      Position		      [301, 250, 359, 308]
-	      ZOrder		      -3
-	      ShowName		      off
-	      AttributesFormatString  "Disregard Subsystem\\nFor Generation"
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Disregard Subsystem"
-	      SourceType	      "Xilinx Disregard Subsystem For Generation Block"
-	      infoedit		      "Place this block into a subsystem to have System Generator ignore the subsystem during code ge"
-	      "neration. This block can be used in combination with the Simulation Multiplexer block to provide an alternative"
-	      " simulation model for another subsystem (e.g., to provide a simulation model for a black box)."
-	      has_advanced_control    "0"
-	      sggui_pos		      "-1,-1,-1,-1"
-	      block_type	      "disregard"
-	      block_version	      "10.1.3"
-	      sg_icon_stat	      "58,58,-1,-1,darkgray,black,0,0,right"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 58 58 0 ],[0 0 58 58 ],[0.1 0.1 0."
-	      "1]);\npatch([14 4 18 4 14 29 33 37 53 40 28 19 33 19 28 40 53 37 33 29 14 ],[6 16 30 44 54 54 50 54 54 41 53 44"
-	      " 30 16 7 19 6 6 10 6 6 ],[0.33 0.33 0.33]);\nplot([0 58 58 0 0 ],[0 0 58 58 0 ]);\nfprintf('','COMMENT: end ico"
-	      "n graphics');\nfprintf('','COMMENT: begin icon text');\nfprintf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Gain
-	      Name		      "Gain"
-	      SID		      "794"
-	      Position		      [425, 190, 470, 220]
-	      ZOrder		      -4
-	      ShowName		      off
-	      Gain		      "0.25"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Rx_I1"
-	      SID		      "795"
-	      Ports		      [1, 1]
-	      Position		      [335, 199, 380, 211]
-	      ZOrder		      -5
-	      NamePlacement	      "alternate"
-	      ShowName		      off
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Gateway Out"
-	      SourceType	      "Xilinx Gateway Out Block"
-	      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, d"
-	      "ouble, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are disc"
-	      "arded, depending on how they are configured."
-	      inherit_from_input      off
-	      hdl_port		      off
-	      timing_constraint	      "None"
-	      locs_specified	      off
-	      LOCs		      "{}"
-	      UseAsDAC		      off
-	      DACChannel	      "'1'"
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,336,386"
-	      block_type	      "gatewayout"
-	      block_version	      "8.2.01"
-	      sg_icon_stat	      "45,12,1,1,white,grey,1,632ec840,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 0 ],[0 0 12 12 0 ],[0.88 0"
-	      ".88 0.88 ]);\nplot([0 45 45 0 0 ],[0 0 12 12 0 ]);\npatch([19.775 21.22 22.22 23.22 24.22 22.22 20.775 19.775 ]"
-	      ",[7.11 7.11 8.11 7.11 8.11 8.11 8.11 7.11 ],[1 1 1 ]);\npatch([20.775 22.22 21.22 19.775 20.775 ],[6.11 6.11 7."
-	      "11 7.11 6.11 ],[0.964 0.964 0.964 ]);\npatch([19.775 21.22 22.22 20.775 19.775 ],[5.11 5.11 6.11 6.11 5.11 ],[1"
-	      " 1 1 ]);\npatch([20.775 24.22 23.22 22.22 21.22 19.775 20.775 ],[4.11 4.11 5.11 4.11 5.11 5.11 4.11 ],[0.964 0."
-	      "964 0.964 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black"
-	      "');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nf"
-	      "printf('','COMMENT: end icon text');"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Y"
-	      SID		      "796"
-	      Position		      [520, 198, 550, 212]
-	      ZOrder		      -6
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Gain"
-	      SrcPort		      1
-	      DstBlock		      "Y"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "X"
-	      SrcPort		      1
-	      DstBlock		      "DAFIR v9_0 2"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "DAFIR v9_0 2"
-	      SrcPort		      1
-	      DstBlock		      "Rx_I1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Rx_I1"
-	      SrcPort		      1
-	      DstBlock		      "Gain"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
 	  BlockType		  Scope
 	  Name			  "Rx Scope"
 	  SID			  "797"
@@ -27719,9 +27332,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Reference\nFilter"
-	  SrcPort		  1
-	  Points		  [465, 0; 0, 200]
+	  Points		  [600, 205; 470, 0; 0, 200]
 	  Branch {
 	    DstBlock		    "Rx Scope"
 	    DstPort		    3
@@ -27733,9 +27344,7 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Reference\nFilter1"
-	  SrcPort		  1
-	  Points		  [450, 0; 0, 285]
+	  Points		  [600, 240; 455, 0; 0, 285]
 	  Branch {
 	    DstBlock		    "Rx Scope"
 	    DstPort		    7
@@ -27785,14 +27394,12 @@ Model {
 	Line {
 	  SrcBlock		  "Down Sample4"
 	  SrcPort		  1
-	  DstBlock		  "Reference\nFilter"
-	  DstPort		  1
+	  Points		  [50, 0; 15, 0]
 	}
 	Line {
 	  SrcBlock		  "Down Sample5"
 	  SrcPort		  1
-	  DstBlock		  "Reference\nFilter1"
-	  DstPort		  1
+	  Points		  [50, 0; 15, 0]
 	}
 	Line {
 	  SrcBlock		  "Up Sample"
@@ -27837,8 +27444,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Tx Path"
-	Location		[0, 90, 1920, 1061]
-	Open			off
+	Location		[0, 108, 1920, 1061]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -35429,357 +35036,6 @@ Model {
 	  InputProcessing	  "Inherited"
 	}
 	Block {
-	  BlockType		  SubSystem
-	  Name			  "Reference\nFilter"
-	  SID			  "1079"
-	  Ports			  [1, 1]
-	  Position		  [515, 174, 580, 206]
-	  ZOrder		  -13
-	  NamePlacement		  "alternate"
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Reference\nFilter"
-	    Location		    [0, 90, 1920, 1061]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "X"
-	      SID		      "1080"
-	      Position		      [110, 198, 140, 212]
-	      ZOrder		      -1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "DAFIR v9_0 2"
-	      SID		      "1081"
-	      Ports		      [1, 1]
-	      Position		      [205, 191, 270, 219]
-	      ZOrder		      -2
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/DAFIR v9_0 "
-	      SourceType	      "Xilinx Finite Impulse Response Filter Block"
-	      infoedit		      "Hardware notes: Implemented using distributed arithmetic (DA).  The hardware over sampling rat"
-	      "e determines the degree of parallelism.  A rate of one produces a fully parallel DA filter.  A rate of n (resp."
-	      ", n+1) for an n-bit input signal produces a fully serial implementation for a non-symmetric (resp., symmetric) "
-	      "impulse response.  Intermediate values produce implementations with intermediate levels of parallelism."
-	      coef		      "h32"
-	      structure		      "Inferred from Coefficients"
-	      coef_n_bits	      "14"
-	      coef_bin_pt	      "13"
-	      over_sample	      "1"
-	      reload		      off
-	      valids		      off
-	      rst		      off
-	      latency		      "15"
-	      num_channels	      "1"
-	      serial_input	      off
-	      polyphase_behavior      "Interpolate:  1:4 (samples in:out)"
-	      dbl_ovrd		      off
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      explicit_period	      "off"
-	      period		      "1"
-	      use_isim		      "0"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,348,503"
-	      block_type	      "fir"
-	      block_version	      "10.1.2"
-	      sg_icon_stat	      "65,28,1,1,white,blue,0,23d63bd5,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 28 28 0 ],[0.77 0"
-	      ".82 0.91 ]);\nplot([0 65 65 0 0 ],[0 0 28 28 0 ]);\npatch([23.1 28.88 32.88 36.88 40.88 32.88 27.1 23.1 ],[18.4"
-	      "4 18.44 22.44 18.44 22.44 22.44 22.44 18.44 ],[1 1 1 ]);\npatch([27.1 32.88 28.88 23.1 27.1 ],[14.44 14.44 18.4"
-	      "4 18.44 14.44 ],[0.931 0.946 0.973 ]);\npatch([23.1 28.88 32.88 27.1 23.1 ],[10.44 10.44 14.44 14.44 10.44 ],[1"
-	      " 1 1 ]);\npatch([27.1 40.88 36.88 32.88 28.88 23.1 27.1 ],[6.44 6.44 10.44 6.44 10.44 10.44 6.44 ],[0.931 0.946"
-	      " 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');"
-	      "port_label('input',1,'x0');\ncolor('black');port_label('output',1,'y0');\ncolor('black');disp('32 tap');\nfprin"
-	      "tf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Disregard Subsystem"
-	      SID		      "1082"
-	      Tag		      "discardX"
-	      Ports		      []
-	      Position		      [301, 250, 359, 308]
-	      ZOrder		      -3
-	      ShowName		      off
-	      AttributesFormatString  "Disregard Subsystem\\nFor Generation"
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Disregard Subsystem"
-	      SourceType	      "Xilinx Disregard Subsystem For Generation Block"
-	      infoedit		      "Place this block into a subsystem to have System Generator ignore the subsystem during code ge"
-	      "neration. This block can be used in combination with the Simulation Multiplexer block to provide an alternative"
-	      " simulation model for another subsystem (e.g., to provide a simulation model for a black box)."
-	      has_advanced_control    "0"
-	      sggui_pos		      "-1,-1,-1,-1"
-	      block_type	      "disregard"
-	      block_version	      "10.1.3"
-	      sg_icon_stat	      "58,58,-1,-1,darkgray,black,0,0,right"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 58 58 0 ],[0 0 58 58 ],[0.1 0.1 0."
-	      "1]);\npatch([14 4 18 4 14 29 33 37 53 40 28 19 33 19 28 40 53 37 33 29 14 ],[6 16 30 44 54 54 50 54 54 41 53 44"
-	      " 30 16 7 19 6 6 10 6 6 ],[0.33 0.33 0.33]);\nplot([0 58 58 0 0 ],[0 0 58 58 0 ]);\nfprintf('','COMMENT: end ico"
-	      "n graphics');\nfprintf('','COMMENT: begin icon text');\nfprintf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Rx_I1"
-	      SID		      "1083"
-	      Ports		      [1, 1]
-	      Position		      [335, 199, 380, 211]
-	      ZOrder		      -4
-	      NamePlacement	      "alternate"
-	      ShowName		      off
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Gateway Out"
-	      SourceType	      "Xilinx Gateway Out Block"
-	      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, d"
-	      "ouble, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are disc"
-	      "arded, depending on how they are configured."
-	      inherit_from_input      off
-	      hdl_port		      off
-	      timing_constraint	      "None"
-	      locs_specified	      off
-	      LOCs		      "{}"
-	      UseAsDAC		      off
-	      DACChannel	      "'1'"
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,379,628"
-	      block_type	      "gatewayout"
-	      block_version	      "8.2.01"
-	      sg_icon_stat	      "45,12,1,1,white,grey,1,632ec840,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 0 ],[0 0 12 12 0 ],[0.88 0"
-	      ".88 0.88 ]);\nplot([0 45 45 0 0 ],[0 0 12 12 0 ]);\npatch([19.775 21.22 22.22 23.22 24.22 22.22 20.775 19.775 ]"
-	      ",[7.11 7.11 8.11 7.11 8.11 8.11 8.11 7.11 ],[1 1 1 ]);\npatch([20.775 22.22 21.22 19.775 20.775 ],[6.11 6.11 7."
-	      "11 7.11 6.11 ],[0.964 0.964 0.964 ]);\npatch([19.775 21.22 22.22 20.775 19.775 ],[5.11 5.11 6.11 6.11 5.11 ],[1"
-	      " 1 1 ]);\npatch([20.775 24.22 23.22 22.22 21.22 19.775 20.775 ],[4.11 4.11 5.11 4.11 5.11 5.11 4.11 ],[0.964 0."
-	      "964 0.964 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black"
-	      "');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nf"
-	      "printf('','COMMENT: end icon text');"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Y"
-	      SID		      "1084"
-	      Position		      [520, 198, 550, 212]
-	      ZOrder		      -5
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "Rx_I1"
-	      SrcPort		      1
-	      DstBlock		      "Y"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "DAFIR v9_0 2"
-	      SrcPort		      1
-	      DstBlock		      "Rx_I1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "X"
-	      SrcPort		      1
-	      DstBlock		      "DAFIR v9_0 2"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Reference\nFilter1"
-	  SID			  "1085"
-	  Ports			  [1, 1]
-	  Position		  [515, 209, 580, 241]
-	  ZOrder		  -14
-	  MinAlgLoopOccurrences	  off
-	  PropExecContextOutsideSubsystem off
-	  RTWSystemCode		  "Auto"
-	  FunctionWithSeparateData off
-	  Opaque		  off
-	  RequestExecContextInheritance	off
-	  MaskHideContents	  off
-	  System {
-	    Name		    "Reference\nFilter1"
-	    Location		    [12, 45, 1968, 1318]
-	    Open		    off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    Block {
-	      BlockType		      Inport
-	      Name		      "X"
-	      SID		      "1086"
-	      Position		      [110, 198, 140, 212]
-	      ZOrder		      -1
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "DAFIR v9_0 2"
-	      SID		      "1087"
-	      Ports		      [1, 1]
-	      Position		      [205, 191, 270, 219]
-	      ZOrder		      -2
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/DAFIR v9_0 "
-	      SourceType	      "Xilinx Finite Impulse Response Filter Block"
-	      infoedit		      "Hardware notes: Implemented using distributed arithmetic (DA).  The hardware over sampling rat"
-	      "e determines the degree of parallelism.  A rate of one produces a fully parallel DA filter.  A rate of n (resp."
-	      ", n+1) for an n-bit input signal produces a fully serial implementation for a non-symmetric (resp., symmetric) "
-	      "impulse response.  Intermediate values produce implementations with intermediate levels of parallelism."
-	      coef		      "h32"
-	      structure		      "Inferred from Coefficients"
-	      coef_n_bits	      "14"
-	      coef_bin_pt	      "13"
-	      over_sample	      "1"
-	      reload		      off
-	      valids		      off
-	      rst		      off
-	      latency		      "15"
-	      num_channels	      "1"
-	      serial_input	      off
-	      polyphase_behavior      "Interpolate:  1:4 (samples in:out)"
-	      dbl_ovrd		      off
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      explicit_period	      "off"
-	      period		      "1"
-	      use_isim		      "0"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,348,503"
-	      block_type	      "fir"
-	      block_version	      "10.1.2"
-	      sg_icon_stat	      "65,28,1,1,white,blue,0,23d63bd5,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 28 28 0 ],[0.77 0"
-	      ".82 0.91 ]);\nplot([0 65 65 0 0 ],[0 0 28 28 0 ]);\npatch([23.1 28.88 32.88 36.88 40.88 32.88 27.1 23.1 ],[18.4"
-	      "4 18.44 22.44 18.44 22.44 22.44 22.44 18.44 ],[1 1 1 ]);\npatch([27.1 32.88 28.88 23.1 27.1 ],[14.44 14.44 18.4"
-	      "4 18.44 14.44 ],[0.931 0.946 0.973 ]);\npatch([23.1 28.88 32.88 27.1 23.1 ],[10.44 10.44 14.44 14.44 10.44 ],[1"
-	      " 1 1 ]);\npatch([27.1 40.88 36.88 32.88 28.88 23.1 27.1 ],[6.44 6.44 10.44 6.44 10.44 10.44 6.44 ],[0.931 0.946"
-	      " 0.973 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');"
-	      "port_label('input',1,'x0');\ncolor('black');port_label('output',1,'y0');\ncolor('black');disp('32 tap');\nfprin"
-	      "tf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Disregard Subsystem"
-	      SID		      "1088"
-	      Tag		      "discardX"
-	      Ports		      []
-	      Position		      [301, 250, 359, 308]
-	      ZOrder		      -3
-	      ShowName		      off
-	      AttributesFormatString  "Disregard Subsystem\\nFor Generation"
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Disregard Subsystem"
-	      SourceType	      "Xilinx Disregard Subsystem For Generation Block"
-	      infoedit		      "Place this block into a subsystem to have System Generator ignore the subsystem during code ge"
-	      "neration. This block can be used in combination with the Simulation Multiplexer block to provide an alternative"
-	      " simulation model for another subsystem (e.g., to provide a simulation model for a black box)."
-	      has_advanced_control    "0"
-	      sggui_pos		      "-1,-1,-1,-1"
-	      block_type	      "disregard"
-	      block_version	      "10.1.3"
-	      sg_icon_stat	      "58,58,-1,-1,darkgray,black,0,0,right"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 58 58 0 ],[0 0 58 58 ],[0.1 0.1 0."
-	      "1]);\npatch([14 4 18 4 14 29 33 37 53 40 28 19 33 19 28 40 53 37 33 29 14 ],[6 16 30 44 54 54 50 54 54 41 53 44"
-	      " 30 16 7 19 6 6 10 6 6 ],[0.33 0.33 0.33]);\nplot([0 58 58 0 0 ],[0 0 58 58 0 ]);\nfprintf('','COMMENT: end ico"
-	      "n graphics');\nfprintf('','COMMENT: begin icon text');\nfprintf('','COMMENT: end icon text');\n"
-	    }
-	    Block {
-	      BlockType		      Reference
-	      Name		      "Rx_I1"
-	      SID		      "1089"
-	      Ports		      [1, 1]
-	      Position		      [335, 199, 380, 211]
-	      ZOrder		      -4
-	      NamePlacement	      "alternate"
-	      ShowName		      off
-	      LibraryVersion	      "1.2"
-	      SourceBlock	      "xbsIndex_r4/Gateway Out"
-	      SourceType	      "Xilinx Gateway Out Block"
-	      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, d"
-	      "ouble, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are disc"
-	      "arded, depending on how they are configured."
-	      inherit_from_input      off
-	      hdl_port		      off
-	      timing_constraint	      "None"
-	      locs_specified	      off
-	      LOCs		      "{}"
-	      UseAsDAC		      off
-	      DACChannel	      "'1'"
-	      xl_use_area	      off
-	      xl_area		      "[0,0,0,0,0,0,0]"
-	      has_advanced_control    "0"
-	      sggui_pos		      "20,20,336,386"
-	      block_type	      "gatewayout"
-	      block_version	      "8.2.01"
-	      sg_icon_stat	      "45,12,1,1,white,grey,1,632ec840,right,,[ ],[ ]"
-	      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 45 45 0 0 ],[0 0 12 12 0 ],[0.88 0"
-	      ".88 0.88 ]);\nplot([0 45 45 0 0 ],[0 0 12 12 0 ]);\npatch([19.775 21.22 22.22 23.22 24.22 22.22 20.775 19.775 ]"
-	      ",[7.11 7.11 8.11 7.11 8.11 8.11 8.11 7.11 ],[1 1 1 ]);\npatch([20.775 22.22 21.22 19.775 20.775 ],[6.11 6.11 7."
-	      "11 7.11 6.11 ],[0.964 0.964 0.964 ]);\npatch([19.775 21.22 22.22 20.775 19.775 ],[5.11 5.11 6.11 6.11 5.11 ],[1"
-	      " 1 1 ]);\npatch([20.775 24.22 23.22 22.22 21.22 19.775 20.775 ],[4.11 4.11 5.11 4.11 5.11 5.11 4.11 ],[0.964 0."
-	      "964 0.964 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black"
-	      "');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nf"
-	      "printf('','COMMENT: end icon text');"
-	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Y"
-	      SID		      "1090"
-	      Position		      [520, 198, 550, 212]
-	      ZOrder		      -5
-	      IconDisplay	      "Port number"
-	    }
-	    Line {
-	      SrcBlock		      "X"
-	      SrcPort		      1
-	      DstBlock		      "DAFIR v9_0 2"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "DAFIR v9_0 2"
-	      SrcPort		      1
-	      DstBlock		      "Rx_I1"
-	      DstPort		      1
-	    }
-	    Line {
-	      SrcBlock		      "Rx_I1"
-	      SrcPort		      1
-	      DstBlock		      "Y"
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
 	  BlockType		  Terminator
 	  Name			  "Terminator1"
 	  SID			  "1091"
@@ -36327,9 +35583,7 @@ Model {
 	  SrcPort		  1
 	  Points		  [100, 0]
 	  Branch {
-	    Points		    [0, -100]
-	    DstBlock		    "Reference\nFilter"
-	    DstPort		    1
+	    Points		    [0, -100; 50, 0]
 	  }
 	  Branch {
 	    DstBlock		    "2-Ch Interp A"
@@ -36384,9 +35638,7 @@ Model {
 	    DstPort		    2
 	  }
 	  Branch {
-	    Points		    [0, -80]
-	    DstBlock		    "Reference\nFilter1"
-	    DstPort		    1
+	    Points		    [0, -80; 45, 0]
 	  }
 	}
 	Line {
@@ -36459,9 +35711,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  SrcBlock		  "Reference\nFilter"
-	  SrcPort		  1
-	  Points		  [485, 0]
+	  Points		  [580, 190; 5, 0; 485, 0]
 	  Branch {
 	    DstBlock		    "Tx Scope"
 	    DstPort		    3
@@ -36494,9 +35744,7 @@ Model {
 	  }
 	}
 	Line {
-	  SrcBlock		  "Reference\nFilter1"
-	  SrcPort		  1
-	  Points		  [480, 0; 0, 85]
+	  Points		  [580, 225; 485, 0; 0, 85]
 	  Branch {
 	    DstBlock		    "Tx Scope"
 	    DstPort		    7
