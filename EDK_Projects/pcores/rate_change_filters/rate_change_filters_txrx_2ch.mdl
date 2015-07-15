@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.56"
+    ComputedModelVersion    "1.57"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 108.0, 1920.0, 953.0]
+      Location		      [0.0, 72.0, 1920.0, 989.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -41,7 +41,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -57,17 +57,17 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "68"
-	  Extents		  [1880.0, 810.0]
+	  Extents		  [1880.0, 846.0]
 	  ZoomFactor		  [0.94]
 	  Offset		  [0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "812"
-	  Extents		  [1880.0, 810.0]
-	  ZoomFactor		  [1.0]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1880.0, 846.0]
+	  ZoomFactor		  [1.98]
 	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 15 17:12:19 2015"
-  RTWModifiedTimeStamp	  358876881
-  ModelVersionFormat	  "1.%<AutoIncrement:56>"
+  LastModifiedDate	  "Wed Jul 15 17:51:26 2015"
+  RTWModifiedTimeStamp	  358882555
+  ModelVersionFormat	  "1.%<AutoIncrement:57>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -886,8 +886,8 @@ Model {
   }
   System {
     Name		    "rate_change_filters_txrx_2ch"
-    Location		    [0, 108, 1920, 1061]
-    Open		    off
+    Location		    [0, 72, 1920, 1061]
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -939,7 +939,7 @@ Model {
       deprecated_control      off
       eval_field	      "0"
       has_advanced_control    "0"
-      sggui_pos		      "1408, 315, 464, 470"
+      sggui_pos		      "3,  22,1916, 987"
       block_type	      "sysgen"
       block_version	      "10.1.3"
       sg_icon_stat	      "51,50,0,0,token,white,0,58c5b5770fe5f7c311f53dbc6e73f0f6,right,,[ ],[ ]"
@@ -6127,7 +6127,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Rx Path"
-	Location		[0, 108, 1920, 1061]
+	Location		[0, 72, 1920, 1061]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -26659,8 +26659,8 @@ Model {
 	  Position		  [1170, 326, 1220, 574]
 	  ZOrder		  -17
 	  Floating		  off
-	  Location		  [3, 137, 1919, 1058]
-	  Open			  on
+	  Location		  [3, 119, 1919, 1058]
+	  Open			  off
 	  NumInputPorts		  "8"
 	  TickLabels		  "on"
 	  ZoomMode		  "xonly"
@@ -27394,12 +27394,12 @@ Model {
 	Line {
 	  SrcBlock		  "Down Sample4"
 	  SrcPort		  1
-	  Points		  [50, 0; 15, 0]
+	  Points		  [65, 0]
 	}
 	Line {
 	  SrcBlock		  "Down Sample5"
 	  SrcPort		  1
-	  Points		  [50, 0; 15, 0]
+	  Points		  [65, 0]
 	}
 	Line {
 	  SrcBlock		  "Up Sample"
@@ -27444,8 +27444,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Tx Path"
-	Location		[0, 108, 1920, 1061]
-	Open			on
+	Location		[0, 72, 1920, 1061]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -35711,7 +35711,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  Points		  [580, 190; 5, 0; 485, 0]
+	  Points		  [580, 190; 490, 0]
 	  Branch {
 	    DstBlock		    "Tx Scope"
 	    DstPort		    3
