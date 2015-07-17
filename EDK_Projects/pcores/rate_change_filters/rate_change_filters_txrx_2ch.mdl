@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.62"
+    ComputedModelVersion    "1.63"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,16 +54,16 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "68"
 	  Extents		  [1400.0, 648.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-61.0, 197.75]
+	  Offset		  [-111.0, 173.75]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "812"
 	  Extents		  [1400.0, 648.0]
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 17 12:33:10 2015"
+  LastModifiedDate	  "Fri Jul 17 12:37:53 2015"
   RTWModifiedTimeStamp	  359035935
-  ModelVersionFormat	  "1.%<AutoIncrement:62>"
+  ModelVersionFormat	  "1.%<AutoIncrement:63>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -26525,7 +26525,7 @@ Model {
 	  VariableName		  "rx_I"
 	  SampleTime		  "1"
 	  Interpolate		  off
-	  OutputAfterFinalValue	  "Cyclic repetition"
+	  OutputAfterFinalValue	  "Setting to zero"
 	}
 	Block {
 	  BlockType		  FromWorkspace
@@ -26537,7 +26537,7 @@ Model {
 	  VariableName		  "rx_Q"
 	  SampleTime		  "1"
 	  Interpolate		  off
-	  OutputAfterFinalValue	  "Cyclic repetition"
+	  OutputAfterFinalValue	  "Setting to zero"
 	}
 	Block {
 	  BlockType		  Scope
