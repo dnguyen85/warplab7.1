@@ -1,6 +1,6 @@
 
-embeddedMults = 'off';
-%embeddedMults = 'on';
+%embeddedMults = 'off';
+embeddedMults = 'on';
 
 subsys = {[bdroot '/Rx Path/2-Ch Decimation B/ROMS & Mults'], [bdroot '/Tx Path/2-Ch Interp B/Mults & ROMs']};
 

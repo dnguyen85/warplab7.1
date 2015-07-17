@@ -44,10 +44,15 @@ tx_Q_10msps.time = []';
 tx_I_10msps.signals.values = real(tx_signal)';
 tx_Q_10msps.signals.values = imag(tx_signal)';
 
+% RX test data vector
+load('test_data/tx_IQ_40msps.mat');
+rx_I = tx_I_40msps;
+rx_Q = tx_Q_40msps;
+
 
 % Test data vector
-load('test_data/rxIQSamples.mat');
-rx_I.time = [];
-rx_Q.time = [];
-rx_I.signals.values = real(rx_IQ);
-rx_Q.signals.values = imag(rx_IQ);
+% load('test_data/rxIQSamples.mat');
+% rx_I.time = [];
+% rx_Q.time = [];
+% rx_I.signals.values = real(rx_IQ);
+% rx_Q.signals.values = imag(rx_IQ);
