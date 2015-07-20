@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.69"
+    ComputedModelVersion    "1.70"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -23,6 +23,7 @@ Model {
   MaxMDLFileLineLength	  120
   InitFcn		  "rate_change_filters_init"
   StartFcn		  "rate_change_filters_init"
+  StopFcn		  "rate_change_filters_post_process"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -80,9 +81,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jul 20 14:24:54 2015"
+  LastModifiedDate	  "Mon Jul 20 15:00:10 2015"
   RTWModifiedTimeStamp	  359301607
-  ModelVersionFormat	  "1.%<AutoIncrement:69>"
+  ModelVersionFormat	  "1.%<AutoIncrement:70>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
