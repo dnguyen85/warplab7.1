@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.66"
+    ComputedModelVersion    "1.67"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,20 +54,20 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "68"
 	  Extents		  [1400.0, 648.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-111.0, 213.75]
+	  Offset		  [-111.0, 198.0]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "812"
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
 	  Extents		  [1400.0, 648.0]
-	  ZoomFactor		  [1.0]
+	  ZoomFactor		  [1.98]
 	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 17 12:56:29 2015"
+  LastModifiedDate	  "Fri Jul 17 13:05:00 2015"
   RTWModifiedTimeStamp	  359035935
-  ModelVersionFormat	  "1.%<AutoIncrement:66>"
+  ModelVersionFormat	  "1.%<AutoIncrement:67>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -858,7 +858,7 @@ Model {
   System {
     Name		    "rate_change_filters_txrx_2ch"
     Location		    [1440, 90, 2880, 881]
-    Open		    off
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -871,7 +871,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "198"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1128"
+    SIDHighWatermark	    "1130"
     Block {
       BlockType		      Reference
       Name		      " System Generator"
@@ -26524,15 +26524,15 @@ Model {
 	  sggui_pos		  "2177,204,386,658"
 	  block_type		  "gatewayin"
 	  block_version		  "8.2.01"
-	  sg_icon_stat		  "65,20,1,1,white,yellow,1,00d3666e,right,,[ ],[ ]"
+	  sg_icon_stat		  "65,20,1,1,white,yellow,1,e514e594,right,,[ ],[ ]"
 	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 20 20 0 ],[0.95 0.93 0.65"
 	  " ]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\npatch([27.55 30.44 32.44 34.44 36.44 32.44 29.55 27.55 ],[12.22 12.22 1"
 	  "4.22 12.22 14.22 14.22 14.22 12.22 ],[1 1 1 ]);\npatch([29.55 32.44 30.44 27.55 29.55 ],[10.22 10.22 12.22 12.22 10"
 	  ".22 ],[0.985 0.979 0.895 ]);\npatch([27.55 30.44 32.44 29.55 27.55 ],[8.22 8.22 10.22 10.22 8.22 ],[1 1 1 ]);\npatc"
 	  "h([29.55 36.44 34.44 32.44 30.44 27.55 29.55 ],[6.22 6.22 8.22 6.22 8.22 8.22 6.22 ],[0.985 0.979 0.895 ]);\nfprint"
 	  "f('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'"
-	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end ic"
-	  "on text');"
+	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('red');port_label('output',1,'  (!)  ');\nfprintf('','COMMENT: en"
+	  "d icon text');"
 	}
 	Block {
 	  BlockType		  Reference
@@ -26606,15 +26606,15 @@ Model {
 	  sggui_pos		  "20,20,386,658"
 	  block_type		  "gatewayin"
 	  block_version		  "8.2.01"
-	  sg_icon_stat		  "65,20,1,1,white,yellow,1,00d3666e,right,,[ ],[ ]"
+	  sg_icon_stat		  "65,20,1,1,white,yellow,1,e514e594,right,,[ ],[ ]"
 	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 20 20 0 ],[0.95 0.93 0.65"
 	  " ]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\npatch([27.55 30.44 32.44 34.44 36.44 32.44 29.55 27.55 ],[12.22 12.22 1"
 	  "4.22 12.22 14.22 14.22 14.22 12.22 ],[1 1 1 ]);\npatch([29.55 32.44 30.44 27.55 29.55 ],[10.22 10.22 12.22 12.22 10"
 	  ".22 ],[0.985 0.979 0.895 ]);\npatch([27.55 30.44 32.44 29.55 27.55 ],[8.22 8.22 10.22 10.22 8.22 ],[1 1 1 ]);\npatc"
 	  "h([29.55 36.44 34.44 32.44 30.44 27.55 29.55 ],[6.22 6.22 8.22 6.22 8.22 8.22 6.22 ],[0.985 0.979 0.895 ]);\nfprint"
 	  "f('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'"
-	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end ic"
-	  "on text');"
+	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('red');port_label('output',1,'  (!)  ');\nfprintf('','COMMENT: en"
+	  "d icon text');"
 	}
 	Block {
 	  BlockType		  Reference
@@ -26851,6 +26851,32 @@ Model {
 	  SaveFormat		  "Structure With Time"
 	}
 	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  SID			  "1129"
+	  Ports			  [1]
+	  Position		  [470, 580, 530, 610]
+	  ZOrder		  9
+	  ShowName		  off
+	  VariableName		  "rx_I_40msps_hw"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Structure With Time"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace5"
+	  SID			  "1130"
+	  Ports			  [1]
+	  Position		  [470, 620, 530, 650]
+	  ZOrder		  10
+	  ShowName		  off
+	  VariableName		  "rx_Q_40msps_hw"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Timeseries"
+	}
+	Block {
 	  BlockType		  Reference
 	  Name			  "Up Sample"
 	  SID			  "808"
@@ -26989,8 +27015,16 @@ Model {
 	Line {
 	  SrcBlock		  "RxA_I_40M"
 	  SrcPort		  1
-	  DstBlock		  "Down Sample"
-	  DstPort		  1
+	  Points		  [14, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Down Sample"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  SrcBlock		  "From Workspace"
@@ -27109,8 +27143,16 @@ Model {
 	Line {
 	  SrcBlock		  "RxA_Q_40M"
 	  SrcPort		  1
-	  DstBlock		  "Down Sample1"
-	  DstPort		  1
+	  Points		  [41, 0]
+	  Branch {
+	    Points		    [0, 235]
+	    DstBlock		    "To Workspace5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Down Sample1"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  SrcBlock		  "2-Ch Decimation A"
@@ -27210,7 +27252,7 @@ Model {
       System {
 	Name			"Tx Path"
 	Location		[1440, 90, 2880, 881]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
