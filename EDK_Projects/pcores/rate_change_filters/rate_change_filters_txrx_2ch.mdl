@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.67"
+    ComputedModelVersion    "1.69"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -32,7 +32,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [1440.0, 90.0, 1440.0, 791.0]
+      Location		      [0.0, 72.0, 1920.0, 989.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -57,17 +57,17 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "68"
-	  Extents		  [1400.0, 648.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-111.0, 198.0]
+	  Extents		  [1880.0, 846.0]
+	  ZoomFactor		  [1.5092250922509223]
+	  Offset		  [38.603911980439989, 280.72371638141794]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1400.0, 648.0]
-	  ZoomFactor		  [1.98]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "812"
+	  Extents		  [1880.0, 846.0]
+	  ZoomFactor		  [1.0]
 	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
@@ -80,9 +80,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "dhn24"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 17 13:05:00 2015"
-  RTWModifiedTimeStamp	  359035935
-  ModelVersionFormat	  "1.%<AutoIncrement:67>"
+  LastModifiedDate	  "Mon Jul 20 14:24:54 2015"
+  RTWModifiedTimeStamp	  359301607
+  ModelVersionFormat	  "1.%<AutoIncrement:69>"
   ConfigurationManager	  "None"
   SampleTimeColors	  on
   SampleTimeAnnotations	  off
@@ -184,7 +184,7 @@ Model {
 	  $ObjectID		  9
 	  Version		  "1.12.1"
 	  StartTime		  "0.0"
-	  StopTime		  "3e3"
+	  StopTime		  "10e3"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -857,8 +857,8 @@ Model {
   }
   System {
     Name		    "rate_change_filters_txrx_2ch"
-    Location		    [1440, 90, 2880, 881]
-    Open		    on
+    Location		    [0, 72, 1920, 1061]
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -6098,7 +6098,7 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Rx Path"
-	Location		[1440, 90, 2880, 881]
+	Location		[0, 72, 1920, 1061]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -6110,7 +6110,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"150"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "2-Ch Decimation A"
@@ -26347,48 +26347,6 @@ Model {
 	  "'','COMMENT: end icon text');"
 	}
 	Block {
-	  BlockType		  Reference
-	  Name			  "Downsample"
-	  SID			  "1121"
-	  Ports			  [1, 1]
-	  Position		  [1125, 728, 1160, 762]
-	  ZOrder		  5
-	  ShowName		  off
-	  LibraryVersion	  "1.726"
-	  UserDataPersistent	  on
-	  UserData		  "DataTag1"
-	  SourceBlock		  "dspsigops/Downsample"
-	  SourceType		  "Downsample"
-	  N			  "8"
-	  phase			  "0"
-	  InputProcessing	  "Elements as channels (sample based)"
-	  RateOptions		  "Enforce single-rate processing"
-	  smode			  "Allow multirate"
-	  fmode			  "Maintain input frame size"
-	  ic			  "0"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Downsample1"
-	  SID			  "1122"
-	  Ports			  [1, 1]
-	  Position		  [1125, 798, 1160, 832]
-	  ZOrder		  6
-	  ShowName		  off
-	  LibraryVersion	  "1.726"
-	  UserDataPersistent	  on
-	  UserData		  "DataTag2"
-	  SourceBlock		  "dspsigops/Downsample"
-	  SourceType		  "Downsample"
-	  N			  "8"
-	  phase			  "0"
-	  InputProcessing	  "Elements as channels (sample based)"
-	  RateOptions		  "Enforce single-rate processing"
-	  smode			  "Allow multirate"
-	  fmode			  "Maintain input frame size"
-	  ic			  "0"
-	}
-	Block {
 	  BlockType		  FromWorkspace
 	  Name			  "From Workspace"
 	  SID			  "1117"
@@ -26420,7 +26378,7 @@ Model {
 	  Position		  [1170, 326, 1220, 574]
 	  ZOrder		  -17
 	  Floating		  off
-	  Location		  [1443, 119, 2879, 878]
+	  Location		  [3, 101, 1919, 1058]
 	  Open			  on
 	  NumInputPorts		  "4"
 	  TickLabels		  "on"
@@ -26524,15 +26482,15 @@ Model {
 	  sggui_pos		  "2177,204,386,658"
 	  block_type		  "gatewayin"
 	  block_version		  "8.2.01"
-	  sg_icon_stat		  "65,20,1,1,white,yellow,1,e514e594,right,,[ ],[ ]"
+	  sg_icon_stat		  "65,20,1,1,white,yellow,1,00d3666e,right,,[ ],[ ]"
 	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 20 20 0 ],[0.95 0.93 0.65"
 	  " ]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\npatch([27.55 30.44 32.44 34.44 36.44 32.44 29.55 27.55 ],[12.22 12.22 1"
 	  "4.22 12.22 14.22 14.22 14.22 12.22 ],[1 1 1 ]);\npatch([29.55 32.44 30.44 27.55 29.55 ],[10.22 10.22 12.22 12.22 10"
 	  ".22 ],[0.985 0.979 0.895 ]);\npatch([27.55 30.44 32.44 29.55 27.55 ],[8.22 8.22 10.22 10.22 8.22 ],[1 1 1 ]);\npatc"
 	  "h([29.55 36.44 34.44 32.44 30.44 27.55 29.55 ],[6.22 6.22 8.22 6.22 8.22 8.22 6.22 ],[0.985 0.979 0.895 ]);\nfprint"
 	  "f('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'"
-	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('red');port_label('output',1,'  (!)  ');\nfprintf('','COMMENT: en"
-	  "d icon text');"
+	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end ic"
+	  "on text');"
 	}
 	Block {
 	  BlockType		  Reference
@@ -26606,15 +26564,15 @@ Model {
 	  sggui_pos		  "20,20,386,658"
 	  block_type		  "gatewayin"
 	  block_version		  "8.2.01"
-	  sg_icon_stat		  "65,20,1,1,white,yellow,1,e514e594,right,,[ ],[ ]"
+	  sg_icon_stat		  "65,20,1,1,white,yellow,1,00d3666e,right,,[ ],[ ]"
 	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 65 65 0 0 ],[0 0 20 20 0 ],[0.95 0.93 0.65"
 	  " ]);\nplot([0 65 65 0 0 ],[0 0 20 20 0 ]);\npatch([27.55 30.44 32.44 34.44 36.44 32.44 29.55 27.55 ],[12.22 12.22 1"
 	  "4.22 12.22 14.22 14.22 14.22 12.22 ],[1 1 1 ]);\npatch([29.55 32.44 30.44 27.55 29.55 ],[10.22 10.22 12.22 12.22 10"
 	  ".22 ],[0.985 0.979 0.895 ]);\npatch([27.55 30.44 32.44 29.55 27.55 ],[8.22 8.22 10.22 10.22 8.22 ],[1 1 1 ]);\npatc"
 	  "h([29.55 36.44 34.44 32.44 30.44 27.55 29.55 ],[6.22 6.22 8.22 6.22 8.22 8.22 6.22 ],[0.985 0.979 0.895 ]);\nfprint"
 	  "f('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'"
-	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('red');port_label('output',1,'  (!)  ');\nfprintf('','COMMENT: en"
-	  "d icon text');"
+	  "\\fontsize{11pt}\\bf In ','texmode','on');\ncolor('black');port_label('output',1,' ');\nfprintf('','COMMENT: end ic"
+	  "on text');"
 	}
 	Block {
 	  BlockType		  Reference
@@ -26822,59 +26780,7 @@ Model {
 	  VariableName		  "rx_Q_10msps"
 	  MaxDataPoints		  "inf"
 	  SampleTime		  "-1"
-	  SaveFormat		  "Timeseries"
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace2"
-	  SID			  "1123"
-	  Ports			  [1]
-	  Position		  [1215, 730, 1275, 760]
-	  ZOrder		  7
-	  ShowName		  off
-	  VariableName		  "rx_I_out"
-	  MaxDataPoints		  "inf"
-	  SampleTime		  "-1"
-	  SaveFormat		  "Timeseries"
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace3"
-	  SID			  "1124"
-	  Ports			  [1]
-	  Position		  [1215, 800, 1275, 830]
-	  ZOrder		  8
-	  ShowName		  off
-	  VariableName		  "rx_Q_out"
-	  MaxDataPoints		  "inf"
-	  SampleTime		  "-1"
 	  SaveFormat		  "Structure With Time"
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace4"
-	  SID			  "1129"
-	  Ports			  [1]
-	  Position		  [470, 580, 530, 610]
-	  ZOrder		  9
-	  ShowName		  off
-	  VariableName		  "rx_I_40msps_hw"
-	  MaxDataPoints		  "inf"
-	  SampleTime		  "-1"
-	  SaveFormat		  "Structure With Time"
-	}
-	Block {
-	  BlockType		  ToWorkspace
-	  Name			  "To Workspace5"
-	  SID			  "1130"
-	  Ports			  [1]
-	  Position		  [470, 620, 530, 650]
-	  ZOrder		  10
-	  ShowName		  off
-	  VariableName		  "rx_Q_40msps_hw"
-	  MaxDataPoints		  "inf"
-	  SampleTime		  "-1"
-	  SaveFormat		  "Timeseries"
 	}
 	Block {
 	  BlockType		  Reference
@@ -27015,16 +26921,8 @@ Model {
 	Line {
 	  SrcBlock		  "RxA_I_40M"
 	  SrcPort		  1
-	  Points		  [14, 0]
-	  Branch {
-	    Points		    [0, 220]
-	    DstBlock		    "To Workspace4"
-	    DstPort		    1
-	  }
-	  Branch {
-	    DstBlock		    "Down Sample"
-	    DstPort		    1
-	  }
+	  DstBlock		  "Down Sample"
+	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "From Workspace"
@@ -27073,15 +26971,8 @@ Model {
 	  Points		  [197, 0]
 	  Branch {
 	    Points		    [0, 260]
-	    Branch {
-	      Points		      [0, 110]
-	      DstBlock		      "Downsample"
-	      DstPort		      1
-	    }
-	    Branch {
-	      DstBlock		      "To Workspace"
-	      DstPort		      1
-	    }
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
 	  }
 	  Branch {
 	    Points		    [148, 0]
@@ -27099,15 +26990,8 @@ Model {
 	  }
 	  Branch {
 	    Points		    [0, 150]
-	    Branch {
-	      Points		      [0, 125]
-	      DstBlock		      "Downsample1"
-	      DstPort		      1
-	    }
-	    Branch {
-	      DstBlock		      "To Workspace1"
-	      DstPort		      1
-	    }
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
 	  }
 	}
 	Line {
@@ -27143,16 +27027,8 @@ Model {
 	Line {
 	  SrcBlock		  "RxA_Q_40M"
 	  SrcPort		  1
-	  Points		  [41, 0]
-	  Branch {
-	    Points		    [0, 235]
-	    DstBlock		    "To Workspace5"
-	    DstPort		    1
-	  }
-	  Branch {
-	    DstBlock		    "Down Sample1"
-	    DstPort		    1
-	  }
+	  DstBlock		  "Down Sample1"
+	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "2-Ch Decimation A"
@@ -27220,18 +27096,6 @@ Model {
 	  DstBlock		  "RxB_Q_10M"
 	  DstPort		  1
 	}
-	Line {
-	  SrcBlock		  "Downsample"
-	  SrcPort		  1
-	  DstBlock		  "To Workspace2"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Downsample1"
-	  SrcPort		  1
-	  DstBlock		  "To Workspace3"
-	  DstPort		  1
-	}
       }
     }
     Block {
@@ -27251,8 +27115,8 @@ Model {
       MaskHideContents	      off
       System {
 	Name			"Tx Path"
-	Location		[1440, 90, 2880, 881]
-	Open			off
+	Location		[0, 72, 1920, 1061]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -34738,7 +34602,7 @@ Model {
 	  Position		  [1160, 111, 1210, 359]
 	  ZOrder		  -17
 	  Floating		  off
-	  Location		  [1443, 119, 2879, 878]
+	  Location		  [3, 101, 1919, 1058]
 	  Open			  on
 	  NumInputPorts		  "4"
 	  TickLabels		  "on"
@@ -35421,7 +35285,7 @@ Model {
   }
 }
 MatData {
-  NumRecords		  3
+  NumRecords		  1
   DataRecord {
     Tag			    DataTag0
     Data		    "  %)30     .    6%4   8    (     @         %    \"     $    !     0         %  0 !@    $    ,    <V%V96"
@@ -35683,15 +35547,5 @@ MatData {
     "  @    $          4    (     0   !$    !         !     1    4')O:F5C=\"!.879I9V%T;W(         #@   $     &    \"   "
     "  0         !0    @    !    #0    $         $     T   !84U0@1&5F875L=',J    #@   $     &    \"     0         !0   "
     " @    !    #0    $         $     T   !)4T4@1&5F875L=',J    "
-  }
-  DataRecord {
-    Tag			    DataTag1
-    Data		    "  %)30     .    B     8    (     @         %    \"     $    !     0         %  0 $P    $    3    :&%S26"
-    "YH97)I=&5D3W!T:6]N        #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    "
-  }
-  DataRecord {
-    Tag			    DataTag2
-    Data		    "  %)30     .    B     8    (     @         %    \"     $    !     0         %  0 $P    $    3    :&%S26"
-    "YH97)I=&5D3W!T:6]N        #@   #     &    \"     D\"        !0    @    !     0    $          @ !  $    "
   }
 }
